@@ -1,13 +1,13 @@
-@use 'vars';
+@import 'vars';
 
-scroll-container {
+.Scroll {
   display: block;
   width: fit-content;
   height: 168px;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-scroll-container::-webkit-scrollbar {
+.Scroll::-webkit-scrollbar {
   width: 8px;
   height: 8px;
   display: none;
