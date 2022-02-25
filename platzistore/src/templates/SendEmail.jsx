@@ -1,29 +1,30 @@
 import React from 'react';
-import '@styles/SendEmail.scss';
+import styles from '@styles/SendEmail.module.scss';
 import logo from '@logos/logo_yard_sale.svg';
 import email from '@icons/email.svg';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const SendEmail = () => {
-	return (
-		<div className="SendEmail">
-			<div className="form-container">
-				<img src={logo} alt="logo" className="logo" />
-				<h1 className="title">Email has been sent!</h1>
-				<p className="subtitle">Please check your inbox for instructions on how to reset the password</p>
-				<div className="email-image">
-					<img src={email} alt="email" />
-				</div>
-				<Link to="/login">
-					<button className="primary-button login-button">Login</button>
-				</Link>
-				<p className="resend">
-					<span>Didn't receive the email?</span>
-					<a href="/send-email">Resend</a>
-				</p>
-			</div>
-		</div>
-	);
-}
+  return (
+    <div className={styles.SendEmail}>
+      <div className={styles['form-container']}>
+        <Image src={logo} alt="logo" className={styles.logo} />
+        <h1 className={styles.title}>Email has been sent!</h1>
+        <p className={styles.subtitle}>Please check your inbox for instructions on how to reset the password</p>
+        <div className={styles['email-image']}>
+          <Image src={email} alt="email" />
+        </div>
+        <Link href="/login">
+          <button className={styles['primary-button login-button']}>Login</button>
+        </Link>
+        <p className={styles.resend}>
+          <span>Didn't receive the email?</span>
+          <a href="/send-email">Resend</a>
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default SendEmail;

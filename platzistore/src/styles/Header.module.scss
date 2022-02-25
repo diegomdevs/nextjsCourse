@@ -8,7 +8,8 @@
   position: fixed;
   top: 0;
   background: white;
-  width: calc(100% - 50px);
+  width: calc(100% - 0px);
+  z-index: 1;
 }
 .menu {
   display: none;
@@ -31,6 +32,9 @@
 .navbar-left ul {
   margin-left: 12px;
 }
+.navbar-right li:first-of-type {
+  margin: 0 1em 0 0;
+}
 .navbar-left ul li a,
 .navbar-right ul li a {
   text-decoration: none;
@@ -48,6 +52,10 @@
   color: $--very-light-pink;
   font-size: $--sm;
   margin-right: 12px;
+}
+.navbar-email-buttom {
+  border: none;
+  background-color: white;
 }
 .navbar-shopping-cart {
   position: relative;

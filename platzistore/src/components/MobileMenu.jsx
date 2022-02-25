@@ -1,54 +1,56 @@
 import React, { useContext } from 'react';
+import Link from 'next/link';
 import styles from '@styles/MobileMenu.module.scss';
 import close from '@icons/icon_close.png';
 import AppContext from '@context/AppContext';
+import Image from 'next/image';
 
 const MobileMenu = () => {
   const { toggleMenuMobile, toggleOrder } = useContext(AppContext);
   return (
     <div className={styles['mobile-menu']}>
       <ul>
-        <img src={close} alt="close" className={styles['mobile-menu-close']} onClick={() => toggleMenuMobile()} />
+        <Image src={close} alt="close" className={styles['mobile-menu-close']} onClick={() => toggleMenuMobile()} />
         <li>
-          <a href="">CATEGORIES</a>
+          <Link href="">CATEGORIES</Link>
         </li>
         <li>
-          <a href="">All</a>
+          <Link href="">All</Link>
         </li>
         <li>
-          <a href="">Clothes</a>
+          <Link href="">Clothes</Link>
         </li>
         <li>
-          <a href="">Electronics</a>
+          <Link href="">Electronics</Link>
         </li>
         <li>
-          <a href="">Furnitures</a>
+          <Link href="">Furnitures</Link>
         </li>
         <li>
-          <a href="">Toys</a>
+          <Link href="">Toys</Link>
         </li>
         <li>
-          <a href="">Others</a>
+          <Link href="">Others</Link>
         </li>
       </ul>
       <ul>
         <li>
-          <a onClick={() => toggleOrder()}>My orders</a>
+          <Link onClick={() => toggleOrder()}>My orders</Link>
         </li>
         <li>
-          <a href="/account">My accounts</a>
+          <Link href="/account">My accounts</Link>
         </li>
       </ul>
-      <ul className="mobile-menu-email-and-sign-out">
+      <ul className={styles['mobile-menu-email-and-sign-out']}>
         <li>
-          <a href="/" className="mobile-menu-email">
+          <Link href="/" className={styles['mobile-menu-email']}>
             platzi@example.com
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="mobile-menu-sign-out" href="/login">
+          <Link className={styles['mobile-menu-sign-out']} href="/login">
             Sign out
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
