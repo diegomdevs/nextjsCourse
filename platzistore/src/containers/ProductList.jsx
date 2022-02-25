@@ -5,7 +5,7 @@ import useGetProducts from '@hooks/useGetProducts';
 import MobileMenu from '@components/MobileMenu';
 import AppContext from '@context/AppContext';
 
-const API = 'https://api.escuelajs.co/api/v1/products';
+const API = 'https://api.escuelajs.co/api/v1/products/';
 
 const ProductList = () => {
   const products = useGetProducts(API);

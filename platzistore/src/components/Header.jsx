@@ -10,7 +10,7 @@ import shoppingCart from '@icons/icon_shopping_cart.svg';
 import styles from '@styles/Header.module.scss';
 
 const Header = () => {
-  const { state, toggleMenu, toggleOrder, toggleMenuMobile } = useContext(AppContext);
+  const { state, toggleMenu, toggleOrder } = useContext(AppContext);
 
   return (
     <div className="Header">
@@ -49,10 +49,8 @@ const Header = () => {
               </button>
             </li>
             <li className={styles['navbar-shopping-cart']}>
-              <buttom onClick={() => toggleOrder()}>
-                <Image src={shoppingCart} alt="shopping cart" />
-                {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
-              </buttom>
+              <Image src={shoppingCart} alt="shopping cart" onClick={() => toggleOrder()} />
+              {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
             </li>
           </ul>
         </div>

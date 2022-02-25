@@ -1,17 +1,16 @@
-@use 'vars';
+@import 'vars';
 
 .NotFound {
-    display: grid;
-    place-content: center;
-    text-align: center;
+  display: grid;
+  place-content: center;
+  text-align: center;
 }
 .NotFound h1 {
-    font-size: 300px;
-    margin-top: 50px;
-    margin-bottom: 10px;
-
+  font-size: 300px;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 .NotFound h2 {
-    margin-top: 10px;
-    font-size: 50px;
+  margin-top: 10px;
+  font-size: 50px;
 }
